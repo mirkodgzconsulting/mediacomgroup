@@ -87,8 +87,8 @@ export function PortfolioFeed() {
                   >
                     <div className="bg-linear-to-br from-[#0B0F19] to-[#02040A] p-8 rounded-xl relative overflow-hidden h-full shadow-2xl">
                        
-                       {/* Inner Glow */}
-                       <div className={`absolute top-0 right-0 w-80 h-80 bg-linear-to-br ${step.color} blur-[100px] opacity-20 group-hover:opacity-30 transition-opacity`} />
+                       {/* Inner Glow - Optimized */}
+                       <div className={`absolute top-0 right-0 w-80 h-80 bg-linear-to-br ${step.color} blur-[40px] md:blur-[100px] opacity-20 group-hover:opacity-30 transition-opacity`} />
                        
                        <div className="relative z-10">
                           <div className="flex justify-between items-start mb-6">
@@ -126,67 +126,69 @@ export function PortfolioFeed() {
              </div>
 
              {/* Right Column: Sticky Image */}
-             <div className="sticky top-24 block self-start w-full max-w-[350px] lg:max-w-none mx-auto order-first lg:order-last lg:mt-0">
+             <div className="relative md:sticky md:top-24 block self-start w-full max-w-[350px] lg:max-w-none mx-auto order-first lg:order-last lg:mt-0">
                <div className="relative w-full aspect-square flex items-center justify-center perspective-[500px] overflow-hidden rounded-3xl">
                   
-                  {/* Deep Space Gradient */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,0,50,0.3),transparent_70%)] blur-3xl" />
+                  {/* Deep Space Gradient - Reduced Blur for Mobile */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,0,50,0.3),transparent_70%)] blur-xl md:blur-3xl" />
 
-                  {/* Chaos Particles - High quantity, small size */}
-                  {randomParticles.map((particle, i) => (
-                    <motion.div
-                      key={`chaos-${i}`}
-                      className={`absolute rounded-full bg-white opacity-40 blur-[1px]`}
-                      style={{
-                        width: particle.width,
-                        height: particle.height,
-                        left: "50%",
-                        top: "50%",
-                      }}
-                      animate={{
-                        x: [0, particle.x],
-                        y: [0, particle.y],
-                        opacity: [0, 1, 0],
-                        scale: [0, 1, 0],
-                      }}
-                      transition={{
-                        duration: particle.duration,
-                        repeat: Infinity,
-                        ease: "easeOut",
-                        delay: particle.delay,
-                      }}
-                    />
-                  ))}
+                  {/* Chaos Particles - DISABLED ON MOBILE */}
+                  <div className="hidden md:block">
+                    {randomParticles.map((particle, i) => (
+                      <motion.div
+                        key={`chaos-${i}`}
+                        className={`absolute rounded-full bg-white opacity-40 blur-[1px]`}
+                        style={{
+                          width: particle.width,
+                          height: particle.height,
+                          left: "50%",
+                          top: "50%",
+                        }}
+                        animate={{
+                          x: [0, particle.x],
+                          y: [0, particle.y],
+                          opacity: [0, 1, 0],
+                          scale: [0, 1, 0],
+                        }}
+                        transition={{
+                          duration: particle.duration,
+                          repeat: Infinity,
+                          ease: "easeOut",
+                          delay: particle.delay,
+                        }}
+                      />
+                    ))}
+                  </div>
 
                   {/* Organized Orbits */}
-                  <div className="relative w-[300px] h-[300px] flex items-center justify-center preserve-3d">
+                  <div className="relative w-[280px] h-[280px] md:w-[300px] md:h-[300px] flex items-center justify-center preserve-3d">
                     
                      {/* Orbit 1 */}
                      <motion.div 
                        animate={{ rotateZ: 360, rotateX: 20, rotateY: 10 }}
                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                       className="absolute inset-0 rounded-full border border-cyan-500/20 border-dashed"
+                       className="absolute inset-0 rounded-full border border-cyan-500/20 border-dashed will-change-transform"
                      >
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-400 rounded-full blur-[2px] shadow-[0_0_15px_rgba(34,211,238,0.8)]" />
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-400 rounded-full blur-none md:blur-[2px] shadow-none md:shadow-[0_0_15px_rgba(34,211,238,0.8)]" />
                      </motion.div>
 
                      {/* Orbit 2 */}
                      <motion.div 
                        animate={{ rotateZ: -360, rotateX: -20, rotateY: 30 }}
                        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                       className="absolute inset-[40px] rounded-full border border-purple-500/20 border-dotted"
+                       className="absolute inset-[40px] rounded-full border border-purple-500/20 border-dotted will-change-transform"
                      >
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-purple-400 rounded-full blur-[2px] shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
-                        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-pink-400 rounded-full blur-[1px]" />
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 bg-purple-400 rounded-full blur-none md:blur-[2px] shadow-none md:shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
+                        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-pink-400 rounded-full blur-none md:blur-[1px]" />
                      </motion.div>
 
                      {/* Orbit 3 (Fast Inner) */}
                      <motion.div 
                        animate={{ rotateZ: 360, rotateX: 45 }}
                        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                       className="absolute inset-[80px] rounded-full border border-white/10"
+                       className="absolute inset-[80px] rounded-full border border-white/10 will-change-transform"
                      >
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]" />
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full shadow-none md:shadow-[0_0_10px_white]" />
                      </motion.div>
 
                      {/* Central Singularity */}
@@ -194,9 +196,9 @@ export function PortfolioFeed() {
                         <motion.div 
                           animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
                           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                          className="w-16 h-16 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full blur-xl" // Increased blur for nebulous look
+                          className="w-16 h-16 bg-linear-to-r from-cyan-500 to-purple-600 rounded-full blur-md md:blur-xl" 
                         />
-                        <div className="w-8 h-8 bg-white rounded-full blur-md animate-pulse z-10" />
+                        <div className="w-8 h-8 bg-white rounded-full blur-sm md:blur-md animate-pulse z-10" />
                      </div>
 
                   </div>
