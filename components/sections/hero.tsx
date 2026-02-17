@@ -10,10 +10,10 @@ export function Hero() {
       {/* Background Gradient - Subtle Ambient Light Right */}
       <div className="absolute top-0 right-0 w-[60%] h-[80%] bg-[radial-gradient(ellipse_at_top_right,rgba(30,58,138,0.4)_0,transparent_70%)] pointer-events-none opacity-60" />
 
-      <div className="container relative z-10 mx-auto px-6 md:px-12 max-w-7xl flex items-center justify-between">
+      <div className="container relative z-10 mx-auto px-6 md:px-12 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0">
         
         {/* Left Content */}
-        <div className="max-w-4xl relative z-10">
+        <div className="max-w-4xl relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
           {/* Badge */}
           <motion.div 
             initial={{ opacity: 0, x: -10 }}
@@ -51,16 +51,16 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-row items-center gap-4"
+            className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
             <Button 
-              className="h-12 bg-gray-200 hover:bg-white text-black font-bold text-sm rounded-lg px-6 shadow-sm transition-all"
+              className="h-12 w-full sm:w-auto bg-gray-200 hover:bg-white text-black font-bold text-sm rounded-lg px-6 shadow-sm transition-all"
             >
               Candida la tua azienda
             </Button>
             
             <Button 
-              className="h-12 bg-[#1e2030] hover:bg-[#2e3248] text-gray-200 hover:text-white font-bold text-sm rounded-lg px-6 border border-white/5 transition-all"
+              className="h-12 w-full sm:w-auto bg-[#1e2030] hover:bg-[#2e3248] text-gray-200 hover:text-white font-bold text-sm rounded-lg px-6 border border-white/5 transition-all"
             >
               Casi Studio
             </Button>
@@ -68,7 +68,7 @@ export function Hero() {
         </div>
 
         {/* Right Abstract Visual */}
-        <div className="hidden lg:block absolute right-[-5%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none select-none">
+        <div className="relative lg:absolute lg:right-[-5%] lg:top-1/2 lg:-translate-y-1/2 w-[340px] h-[340px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] mt-16 lg:mt-0 mx-auto pointer-events-none select-none">
           {/* Main Gradient Blob - Pulsing */}
           <motion.div 
             animate={{ 
@@ -76,7 +76,7 @@ export function Hero() {
               opacity: 0.8
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600/20 via-purple-600/20 to-transparent rounded-full blur-[60px]"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600/20 via-purple-600/20 to-transparent rounded-full blur-[60px]"
           />
           
           {/* Spinning Rings - Faster & More Visible */}

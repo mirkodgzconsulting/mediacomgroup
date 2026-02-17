@@ -5,7 +5,7 @@ import { Send, Mail, MapPin, Phone, type LucideIcon } from "lucide-react"
 
 export function ContactSection() {
   return (
-    <section id="contatti" className="py-32 relative overflow-hidden">
+    <section id="contatti" className="py-20 md:py-32 relative overflow-hidden">
       
       {/* Background Ambience */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />

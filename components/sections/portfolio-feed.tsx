@@ -46,7 +46,7 @@ const randomParticles = Array.from({ length: 20 }, () => ({
 
 export function PortfolioFeed() {
   return (
-    <section className="py-24 md:py-32 relative">
+    <section className="py-20 md:py-32 relative">
        
        <div className="container mx-auto px-4 md:px-6">
           
@@ -126,7 +126,7 @@ export function PortfolioFeed() {
              </div>
 
              {/* Right Column: Sticky Image */}
-             <div className="sticky top-24 hidden lg:block self-start">
+             <div className="sticky top-24 block self-start w-full max-w-[350px] lg:max-w-none mx-auto order-first lg:order-last lg:mt-0">
                <div className="relative w-full aspect-square flex items-center justify-center perspective-[500px]">
                   
                   {/* Deep Space Gradient */}

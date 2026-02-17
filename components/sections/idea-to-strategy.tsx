@@ -18,7 +18,7 @@ const tags = [
 
 export function IdeaToStrategy() {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-20 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-7xl">
         
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
