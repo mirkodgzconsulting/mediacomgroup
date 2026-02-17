@@ -61,9 +61,9 @@ export function ContactSection() {
               
               <div className="space-y-4">
                 <label className="text-xs font-bold text-gray-500 uppercase tracking-widest block pl-1">Interesse</label>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 gap-y-4">
                   {["Branding", "Sviluppo Web", "Marketing", "SEO", "Altro"].map(tag => (
-                    <label key={tag} className="cursor-pointer">
+                    <label key={tag} className="cursor-pointer inline-flex">
                       <input type="checkbox" className="hidden peer" />
                       <span className="px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-gray-400 text-sm font-medium transition-all peer-checked:bg-white peer-checked:text-black peer-checked:border-white hover:border-white/30">
                         {tag}

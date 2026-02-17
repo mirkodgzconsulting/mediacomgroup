@@ -62,7 +62,6 @@ export function Footer() {
 
         <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
            <p>© 2026 Mediacom Group. Tutti i diritti riservati.</p>
-           <p>Designed with ❤️ in Milano.</p>
         </div>
 
       </div>
