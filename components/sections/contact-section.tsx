@@ -114,10 +114,10 @@ function ContactItem({ icon: Icon, label, value }: { icon: LucideIcon, label: st
 function InputGroup({ label, placeholder, type = "text" }: { label: string, placeholder: string, type?: string }) {
   return (
     <div className="space-y-2 group">
-      <label className="text-xs font-bold text-gray-500 uppercase tracking-widest block pl-1 group-focus-within:text-white transition-colors">{label}</label>
+      <label className="text-xs font-bold text-gray-400 uppercase tracking-widest block pl-1 group-focus-within:text-white transition-colors">{label}</label>
       <input 
         type={type}
-        className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl focus:outline-hidden focus:border-white transition-all placeholder:text-gray-700"
+        className="w-full bg-transparent border-b border-white/10 py-4 text-white text-xl focus:outline-hidden focus:border-white transition-all placeholder:text-gray-600"
         placeholder={placeholder}
       />
     </div>

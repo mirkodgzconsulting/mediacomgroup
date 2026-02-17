@@ -127,7 +127,7 @@ export function PortfolioFeed() {
 
              {/* Right Column: Sticky Image */}
              <div className="sticky top-24 block self-start w-full max-w-[350px] lg:max-w-none mx-auto order-first lg:order-last lg:mt-0">
-               <div className="relative w-full aspect-square flex items-center justify-center perspective-[500px]">
+               <div className="relative w-full aspect-square flex items-center justify-center perspective-[500px] overflow-hidden rounded-3xl">
                   
                   {/* Deep Space Gradient */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,0,50,0.3),transparent_70%)] blur-3xl" />

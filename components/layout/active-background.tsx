@@ -9,29 +9,29 @@ export function ActiveBackground() {
       {/* 1. Deep Atmospheric Glow (Base) */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,10,30,1)_0%,#000000_100%)]" />
 
-      {/* 2. Primary Fluid Mesh - Deep Royal Blue */}
+      {/* 2. Primary Fluid Mesh - Deep Royal Blue - OPTIMIZED: Gradient instead of Blur for Mobile */}
       <motion.div
         animate={{
           x: [0, 100, -50, 0],
           y: [0, -50, 50, 0],
           scale: [1, 1.2, 0.9, 1],
-          opacity: [0.1, 0.2, 0.1]
+          opacity: [0.3, 0.4, 0.3] // Higher opacity because no blend mode
         }}
         transition={{
           duration: 20,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[-20%] left-[10%] w-[80vw] h-[80vw] bg-blue-900 rounded-full blur-[80px] md:blur-[180px] opacity-10 mix-blend-screen transform-gpu will-change-transform"
+        className="absolute top-[-20%] left-[10%] w-[80vw] h-[80vw] bg-[radial-gradient(circle,rgba(30,58,138,0.6)_0%,transparent_70%)] opacity-30 mix-blend-normal md:mix-blend-screen transform-gpu will-change-transform"
       />
 
-      {/* 3. Secondary Fluid Mesh - Dark Indigo (Subtle Contrast) */}
+      {/* 3. Secondary Fluid Mesh - Dark Indigo - OPTIMIZED */}
       <motion.div
         animate={{
           x: [0, -50, 100, 0],
           y: [0, 50, -100, 0],
           scale: [1, 1.1, 0.9, 1],
-          opacity: [0.05, 0.15, 0.05]
+          opacity: [0.2, 0.3, 0.2]
         }}
         transition={{
           duration: 25,
@@ -39,15 +39,15 @@ export function ActiveBackground() {
           ease: "easeInOut",
           delay: 5
         }}
-        className="absolute bottom-[-10%] right-[-10%] w-[90vw] h-[90vw] bg-indigo-950 rounded-full blur-[90px] md:blur-[200px] opacity-10 mix-blend-screen transform-gpu will-change-transform"
+        className="absolute bottom-[-10%] right-[-10%] w-[90vw] h-[90vw] bg-[radial-gradient(circle,rgba(30,28,72,0.6)_0%,transparent_70%)] opacity-30 mix-blend-normal md:mix-blend-screen transform-gpu will-change-transform"
       />
 
-      {/* 4. Drifting Nebula - Mid Blue */}
+      {/* 4. Drifting Nebula - Mid Blue - OPTIMIZED */}
       <motion.div
         animate={{
           x: [0, 50, -50, 0],
           y: [0, 20, -20, 0],
-          opacity: [0.05, 0.1, 0.05]
+          opacity: [0.2, 0.3, 0.2]
         }}
         transition={{
           duration: 18,
@@ -55,7 +55,7 @@ export function ActiveBackground() {
           ease: "easeInOut",
           delay: 2
         }}
-        className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] bg-[#1e3a8a] rounded-full blur-[70px] md:blur-[150px] opacity-5 mix-blend-screen transform-gpu will-change-transform"
+        className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] bg-[radial-gradient(circle,rgba(30,58,138,0.5)_0%,transparent_70%)] opacity-20 mix-blend-normal md:mix-blend-screen transform-gpu will-change-transform"
       />
 
       {/* 5. Minimal Grid - Very Faint */}
