@@ -30,7 +30,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-[3.5rem] lg:text-[4rem] font-semibold text-white leading-[1.1] tracking-tight mb-8"
+            className="text-4xl sm:text-5xl md:text-[3.5rem] lg:text-[4rem] font-semibold text-white leading-[1.1] tracking-tight mb-8 will-change-opacity"
           >
             Agenzia di Comunicazione,<br />
             Marketing e Ufficio Stampa
@@ -41,7 +41,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-base text-[#94a3b8] max-w-[500px] leading-relaxed mb-10 font-medium"
+            className="text-base text-[#94a3b8] max-w-[500px] leading-relaxed mb-10 font-medium will-change-opacity"
           >
             Collaboriamo esclusivamente con aziende che superano il nostro processo di selezione e che dimostrano di essere pronte a crescere e dominare il mercato
           </motion.p>

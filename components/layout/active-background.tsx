@@ -22,7 +22,7 @@ export function ActiveBackground() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[-20%] left-[10%] w-[80vw] h-[80vw] bg-blue-900 rounded-full blur-[180px] opacity-10 mix-blend-screen"
+        className="absolute top-[-20%] left-[10%] w-[80vw] h-[80vw] bg-blue-900 rounded-full blur-[80px] md:blur-[180px] opacity-10 mix-blend-screen transform-gpu will-change-transform"
       />
 
       {/* 3. Secondary Fluid Mesh - Dark Indigo (Subtle Contrast) */}
@@ -39,7 +39,7 @@ export function ActiveBackground() {
           ease: "easeInOut",
           delay: 5
         }}
-        className="absolute bottom-[-10%] right-[-10%] w-[90vw] h-[90vw] bg-indigo-950 rounded-full blur-[200px] opacity-10 mix-blend-screen"
+        className="absolute bottom-[-10%] right-[-10%] w-[90vw] h-[90vw] bg-indigo-950 rounded-full blur-[90px] md:blur-[200px] opacity-10 mix-blend-screen transform-gpu will-change-transform"
       />
 
       {/* 4. Drifting Nebula - Mid Blue */}
@@ -55,7 +55,7 @@ export function ActiveBackground() {
           ease: "easeInOut",
           delay: 2
         }}
-        className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] bg-[#1e3a8a] rounded-full blur-[150px] opacity-5 mix-blend-screen"
+        className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] bg-[#1e3a8a] rounded-full blur-[70px] md:blur-[150px] opacity-5 mix-blend-screen transform-gpu will-change-transform"
       />
 
       {/* 5. Minimal Grid - Very Faint */}
