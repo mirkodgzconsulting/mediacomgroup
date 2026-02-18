@@ -9,7 +9,7 @@ const steps = [
     step: "Step 1",
     title: "Call Conoscitiva & Analisi",
     description: "La nostra prima call su Zoom o Google Meet serve per comprendere il tuo business, il tuo settore e a che punto sei nel tuo percorso digitale. Non stiamo ancora creando una strategia, ma stiamo raccogliendo dati essenziali per capire quali sono i tuoi bisogni e le opportunità da sfruttare.",
-    icon: <Rocket className="w-6 h-6 text-cyan-400" />,
+    icon: <Rocket className="w-6 h-6 text-white" />,
     tags: ["Comprensione delle esigenze", "Analisi preliminare"],
     color: "from-blue-500/20 to-cyan-500/20",
     border: "group-hover:border-cyan-500/50"
@@ -18,7 +18,7 @@ const steps = [
     step: "Step 2",
     title: "Definizione della Strategia & Validazione",
     description: "Dopo aver analizzato il tuo business, elaboriamo una strategia su misura. Ti presentiamo il piano per la tua approvazione, testiamo e ottimizziamo ogni aspetto per assicurarci che sia perfettamente allineato con i tuoi obiettivi.",
-    icon: <Target className="w-6 h-6 text-purple-400" />,
+    icon: <Target className="w-6 h-6 text-white" />,
     tags: ["Strategia su misura", "Ottimizzazione pre-lancio"],
     color: "from-purple-500/20 to-pink-500/20",
     border: "group-hover:border-purple-500/50"
@@ -27,7 +27,7 @@ const steps = [
     step: "Step 3",
     title: "Lancio, Monitoraggio & Ottimizzazione",
     description: "Dopo il lancio, monitoriamo costantemente i risultati e ottimizziamo le strategie per garantire il massimo impatto. Analizziamo i dati, scalando ciò che funziona e correggendo ciò che può essere migliorato.",
-    icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
+    icon: <BarChart3 className="w-6 h-6 text-white" />,
     tags: ["Analisi delle performance", "Accelerazione del Business"],
     color: "from-pink-500/20 to-red-500/20",
     border: "group-hover:border-pink-500/50",
@@ -82,7 +82,7 @@ export function PortfolioFeed() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
-                    className={`group p-1 rounded-2xl bg-linear-to-br from-white/10 via-white/5 to-transparent border border-white/5 transition-all duration-500 sticky top-40 hover:border-white/20`}
+                    className={`group p-1 rounded-2xl bg-linear-to-br from-white/10 via-white/5 to-transparent border border-white transition-all duration-500 sticky top-40 hover:border-white`}
                     style={{ zIndex: i + 1 }}
                   >
                     <div className="bg-linear-to-br from-[#0B0F19] to-[#02040A] p-8 rounded-xl relative overflow-hidden h-full shadow-2xl">
@@ -95,7 +95,8 @@ export function PortfolioFeed() {
                              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-colors shadow-lg">
                                 {step.icon}
                              </div>
-                             <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-white/60 tracking-wide">
+                             <div className="px-4 py-1.5 rounded-md bg-[#0a0f1e] border-b border-r border-l border-white/5 border-t border-t-blue-400/50 shadow-[0_0_20px_-5px_rgba(59,130,246,0.4)] text-xs font-bold text-white tracking-wide relative overflow-hidden group-hover:shadow-[0_0_25px_-5px_rgba(59,130,246,0.6)] transition-all">
+                                <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-blue-400 to-transparent opacity-50" />
                                 {step.step}
                              </div>
                           </div>
@@ -114,10 +115,12 @@ export function PortfolioFeed() {
                           </div>
 
                           {step.cta && (
-                            <button className="w-full sm:w-auto px-6 py-3 bg-linear-to-r from-[#ff3067] to-[#ff5c8a] text-white text-sm font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(255,48,103,0.3)] hover:shadow-[0_0_30px_rgba(255,48,103,0.5)] flex items-center justify-center gap-2 group/btn">
-                              Fissa una call 20 min
-                              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                            </button>
+                            <a href="/contatti" className="w-full sm:w-auto">
+                              <button className="w-full sm:w-auto px-6 py-3 bg-linear-to-r from-[#ff3067] to-[#ff5c8a] text-white text-sm font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(255,48,103,0.3)] hover:shadow-[0_0_30px_rgba(255,48,103,0.5)] flex items-center justify-center gap-2 group/btn">
+                                Fissa una call 20 min
+                                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                              </button>
+                            </a>
                           )}
                        </div>
                     </div>

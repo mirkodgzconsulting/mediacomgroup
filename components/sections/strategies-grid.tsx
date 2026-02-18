@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Check } from "lucide-react"
+import Link from "next/link"
 
 const strategies = [
   {
@@ -115,54 +116,55 @@ export function StrategiesGrid() {
             const colors = getColorClasses('blue')
             
             return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 50, rotateX: -20, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-                whileHover={{ translateY: -5, rotateX: 5 }}
-                viewport={{ once: false, margin: "-50px" }}
-                transition={{ type: "spring", stiffness: 60, damping: 20, delay: i * 0.05 }}
-                className="group relative bg-[#080808] border border-white/5 rounded-3xl p-8 transition-all overflow-hidden transform-gpu"
-              >
-                {/* Top Glowing Border Effect */}
-                <div className={`absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent ${colors.border} to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
-                <div className={`absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent ${colors.border} to-transparent blur opacity-40 group-hover:opacity-80 transition-opacity duration-500`} />
+              <Link href="/contatti" key={i} className="block h-full group">
+                <motion.div
+                  initial={{ opacity: 0, y: 50, rotateX: -20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+                  whileHover={{ translateY: -5, rotateX: 5 }}
+                  viewport={{ once: false, margin: "-50px" }}
+                  transition={{ type: "spring", stiffness: 60, damping: 20, delay: i * 0.05 }}
+                  className="relative bg-[#080808] border border-white/5 rounded-3xl p-8 transition-all overflow-hidden transform-gpu h-full"
+                >
+                  {/* Top Glowing Border Effect */}
+                  <div className={`absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent ${colors.border} to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
+                  <div className={`absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent ${colors.border} to-transparent blur opacity-40 group-hover:opacity-80 transition-opacity duration-500`} />
 
-                {/* Subtle Top Tint */}
-                <div className={`absolute inset-x-0 top-0 h-40 bg-linear-to-b ${colors.bg} to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                    <h3 className="text-xl font-bold text-white">{strategy.title}</h3>
-                    {strategy.badge && (
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase ${strategy.badgeColor}`}>
-                        {strategy.badge}
-                      </span>
-                    )}
-                    {strategy.dot && (
-                      <span className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
-                    )}
-                  </div>
-
-                  <p className="text-gray-400 text-sm mb-8 leading-relaxed">
-                    {strategy.description}
-                  </p>
-
-                  <ul className="space-y-4">
-                    {strategy.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
-                        <div className="mt-1 min-w-5 min-h-5 rounded bg-green-500/20 flex items-center justify-center">
-                          <Check className="w-3 h-3 text-green-500" />
-                        </div>
-                        <span className="leading-relaxed">
-                          {item.split("—")[0]} 
-                          <span className="text-gray-500"> — {item.split("—")[1]}</span>
+                  {/* Subtle Top Tint */}
+                  <div className={`absolute inset-x-0 top-0 h-40 bg-linear-to-b ${colors.bg} to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                      <h3 className="text-xl font-bold text-white">{strategy.title}</h3>
+                      {strategy.badge && (
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wide uppercase ${strategy.badgeColor}`}>
+                          {strategy.badge}
                         </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
+                      )}
+                      {strategy.dot && (
+                        <span className="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]" />
+                      )}
+                    </div>
+
+                    <p className="text-gray-400 text-sm mb-8 leading-relaxed">
+                      {strategy.description}
+                    </p>
+
+                    <ul className="space-y-4">
+                      {strategy.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
+                          <div className="mt-1 min-w-5 min-h-5 rounded bg-green-500/20 flex items-center justify-center">
+                            <Check className="w-3 h-3 text-green-500" />
+                          </div>
+                          <span className="leading-relaxed">
+                            {item.split("—")[0]} 
+                            <span className="text-gray-500"> — {item.split("—")[1]}</span>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              </Link>
             )
           })}
         </div>

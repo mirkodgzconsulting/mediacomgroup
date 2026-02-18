@@ -47,8 +47,8 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
           {[
             { name: "Home", href: "/" },
-            { name: "Casi Studio", href: "#casi-studio" },
-            { name: "Contatto", href: "#contatti" }
+            { name: "Casi Studio", href: "/casi-studio" },
+            { name: "Contatto", href: "/contatti" }
           ].map((item) => (
             <Link
               key={item.name}
@@ -62,7 +62,7 @@ export function Navbar() {
 
         {/* Action Button */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="#contatti">
+          <Link href="/contatti">
             <Button 
               className="bg-[#ff3067] hover:bg-[#ff3067]/90 text-white font-medium rounded-lg px-6 py-2 shadow-[0_0_15px_rgba(255,48,103,0.4)] transition-all hover:shadow-[0_0_25px_rgba(255,48,103,0.6)] border-0"
             >
@@ -85,8 +85,8 @@ export function Navbar() {
         <div className="md:hidden fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8 animate-in fade-in duration-200">
            {[
              { name: "Home", href: "/" },
-             { name: "Casi Studio", href: "#casi-studio" },
-             { name: "Contatto", href: "#contatti" }
+             { name: "Casi Studio", href: "/casi-studio" },
+             { name: "Contatto", href: "/contatti" }
            ].map((item) => (
               <Link
                 key={item.name}
@@ -97,7 +97,7 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link href="#contatti" onClick={() => setIsOpen(false)}>
+            <Link href="/contatti" onClick={() => setIsOpen(false)}>
               <Button 
                 className="bg-[#ff3067] text-white font-bold rounded-lg px-8 py-3 text-lg mt-4 shadow-[0_0_20px_rgba(255,48,103,0.5)]"
               >

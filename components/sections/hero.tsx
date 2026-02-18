@@ -53,17 +53,21 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
-            <Button 
-              className="h-12 w-full sm:w-auto bg-gray-200 hover:bg-white text-black font-bold text-sm rounded-lg px-6 shadow-sm transition-all"
-            >
-              Candida la tua azienda
-            </Button>
+            <a href="/contatti" className="w-full sm:w-auto">
+              <Button 
+                className="h-12 w-full bg-gray-200 hover:bg-white text-black font-bold text-sm rounded-lg px-6 shadow-sm transition-all"
+              >
+                Candida la tua azienda
+              </Button>
+            </a>
             
-            <Button 
-              className="h-12 w-full sm:w-auto bg-[#1e2030] hover:bg-[#2e3248] text-gray-200 hover:text-white font-bold text-sm rounded-lg px-6 border border-white/5 transition-all"
-            >
-              Casi Studio
-            </Button>
+            <a href="/casi-studio" className="w-full sm:w-auto">
+              <Button 
+                className="h-12 w-full bg-[#1e2030] hover:bg-[#2e3248] text-gray-200 hover:text-white font-bold text-sm rounded-lg px-6 border border-white/5 transition-all"
+              >
+                Casi Studio
+              </Button>
+            </a>
           </motion.div>
         </div>
 

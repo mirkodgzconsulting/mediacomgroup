@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 
 const images = [
-  "/1.jpeg",
-  "/2.jpeg",
-  "/3.jpeg"
+  "/1.avif",
+  "/2.avif",
+  "/3.avif"
 ]
 
 export function TailoredStrategies() {
@@ -52,7 +52,7 @@ function Card({ src, index }: { src: string, index: number }) {
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-10%" }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="sticky top-32 w-full h-[60vh] md:h-[80vh] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-[#050505]"
+      className="sticky top-32 w-full h-[70vh] md:h-[90vh] rounded-[24px] overflow-hidden border border-white/10 shadow-2xl bg-[#050505]"
       style={{ 
         zIndex: index + 1,
         // Optional: Scale effect on scroll could be added here if we had a ref to the container

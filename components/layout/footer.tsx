@@ -35,9 +35,9 @@ export function Footer() {
            <div>
               <h4 className="font-bold text-white mb-6">Agenzia</h4>
               <ul className="space-y-4 text-sm text-gray-500">
-                {["Chi Siamo", "Il Team", "Carriere", "Contatti"].map(l => (
-                  <li key={l}><a href="#" className="hover:text-primary transition-colors">{l}</a></li>
-                ))}
+                  <li><Link href="/" className="hover:text-[#ff3067] transition-colors">Chi Siamo</Link></li>
+                  <li><Link href="/casi-studio" className="hover:text-[#ff3067] transition-colors">Casi Studio</Link></li>
+                  <li><Link href="/contatti" className="hover:text-[#ff3067] transition-colors">Contatti</Link></li>
               </ul>
            </div>
 

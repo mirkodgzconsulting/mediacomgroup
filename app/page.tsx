@@ -7,7 +7,7 @@ import { StrategiesGrid } from "@/components/sections/strategies-grid";
 import { IdeaToStrategy } from "@/components/sections/idea-to-strategy";
 import { TailoredStrategies } from "@/components/sections/tailored-strategies";
 import { FinalCta } from "@/components/sections/final-cta";
-import { ContactSection } from "@/components/sections/contact-section";
+
 import { PortfolioFeed } from "@/components/sections/portfolio-feed";
 import { Footer } from "@/components/layout/footer";
 
@@ -24,7 +24,7 @@ export default function Home() {
       <IdeaToStrategy />
       <TailoredStrategies />
       <FinalCta />
-      <ContactSection />
+
       <Footer />
     </main>
   );

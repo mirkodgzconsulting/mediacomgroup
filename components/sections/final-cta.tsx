@@ -22,13 +22,15 @@ export function FinalCta() {
         </p>
 
         {/* Button */}
-        <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full bg-[#ff3067] text-white font-bold text-sm md:text-base flex items-center gap-2 shadow-[0_0_30px_rgba(255,48,103,0.4)] hover:shadow-[0_0_50px_rgba(255,48,103,0.6)] transition-all duration-300"
-          >
-            Fissa una call 20 min
-        </motion.button>
+        <a href="/contatti">
+          <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 rounded-full bg-[#ff3067] text-white font-bold text-sm md:text-base flex items-center gap-2 shadow-[0_0_30px_rgba(255,48,103,0.4)] hover:shadow-[0_0_50px_rgba(255,48,103,0.6)] transition-all duration-300"
+            >
+              Fissa una call 20 min
+          </motion.button>
+        </a>
 
       </div>
     </section>

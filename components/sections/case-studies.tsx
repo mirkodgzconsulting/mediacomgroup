@@ -9,37 +9,23 @@ const cases = [
     company: "ZVENIA Platform",
     description: "E-commerce e community privata per ingegneri minerari con abbonamenti.",
     tags: ["WEB DEVELOPMENT", "E-COMMERCE"],
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop",
+    image: "/zvenia.avif",
     id: "CS_01"
   },
   {
     company: "CREACOS SRL",
     description: "Strategia di marketing 360°, dalla fase iniziale al successo attuale.",
     tags: ["SITO WEB", "STRATEGIA"],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+    image: "/creacos.avif",
     id: "CS_02"
   },
   {
     company: "NOVOTEL",
     description: "Strategia Marketing 360° per la catena ospitalità leader.",
     tags: ["MARKETING 360"],
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+    image: "/novotel.avif",
     badge: "PARTNER",
     id: "CS_03"
-  },
-  {
-    company: "GENESIS Luxury",
-    description: "Rebranding completo e posizionamento per servizi esclusivi.",
-    tags: ["BRANDING", "UX/UI"],
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop",
-    id: "CS_04"
-  },
-    {
-    company: "LUMINARY",
-    description: "Piattaforma formazione per creatori digitali con AI.",
-    tags: ["AI INTEGRATION", "LMS"],
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
-    id: "CS_05"
   }
 ]
 
@@ -71,10 +57,10 @@ export function CaseStudies() {
               }}
             >
               {/* Double array for seamless loop */}
-              {[...cases, ...cases].map((item, i) => (
+              {[...cases, ...cases, ...cases, ...cases].map((item, i) => (
                 <div
                   key={i}
-                  className="group relative w-[280px] sm:w-[350px] md:w-[400px] h-[400px] sm:h-[500px] md:h-[580px] shrink-0 rounded-[24px] md:rounded-[32px] overflow-hidden cursor-pointer"
+                  className="group relative w-[280px] sm:w-[350px] md:w-[400px] h-[300px] sm:h-[400px] md:h-[480px] shrink-0 rounded-[24px] md:rounded-[32px] overflow-hidden cursor-pointer"
                 >
                   {/* Full Background Image */}
                   <Image 
